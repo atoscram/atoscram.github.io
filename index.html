@@ -13,17 +13,17 @@ layout: page
 </py-config>
 <py-script>
   from gradio_client import Client
-    import json
+  import json
 
-    def function_proxy(photo):
-        client = Client("https://atoscram-harrison-ford-or-dennis-quaid.hf.space/")
-        result = client.predict(
-                        photo,	# str representing input in 'img' Image component
-                        api_name="/predict"
-        )
+  def function_proxy(photo):
+      client = Client("https://atoscram-harrison-ford-or-dennis-quaid.hf.space/")
+      result = client.predict(
+                      photo,	# str representing input in 'img' Image component
+                      api_name="/predict"
+      )
 
-        json_data = json.load(open(result))
-        return json_data
+      json_data = json.load(open(result))
+      return json_data
 </py-script>
 <script>
   async function loaded(reader) {
