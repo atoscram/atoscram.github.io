@@ -23,12 +23,15 @@ layout: page
       )
 
       json_data = json.load(open(result))
+      print(json_data)
       return json_data
+  
+  func_p
 </py-script>
 <script>
   async function loaded(reader) {
     // Get gradio python client
-    client = pyscript.interpreter.globals.get('function_proxy')
+    client = pyscript.interpreter.globals.get('func_p')
     const response = client(reader.result)
 
     // const response = await fetch('https://atoscram-harrison-ford-or-dennis-quaid.hf.space/predict/', {
